@@ -16,7 +16,7 @@ exports.server = {
     repositoryUrl: 'https://github.com/orxan07/server.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 8080:8080 -d',
+      args: '-p 1234:8080 -d',
       process: 'src/server.js'
     }
   }
