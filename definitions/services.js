@@ -4,6 +4,40 @@ exports.root = {
   type: 'blank-container'
 };
 
+
+exports.server = {
+  type: 'docker',
+  override: {
+    process: {
+      type: 'process'
+    }
+  },
+  specific: {
+    repositoryUrl: 'https://github.com/orxan07/server.git',
+    processBuild: 'npm install',
+    execute: {
+      args: '-p 8080:8080 -d',
+      process: 'src/server.js'
+    }
+  }
+};
+exports.client = {
+  type: 'docker',
+  override: {
+    process: {
+      type: 'process'
+    }
+  },
+  specific: {
+    repositoryUrl: 'https://github.com/orxan07/client.git',
+    processBuild: 'npm install',
+    execute: {
+      args: '-p 1337:1337 -d',
+      process: 'src/server.js'
+    }
+  }
+};
+
 // Example
 //
 // exports.web = {

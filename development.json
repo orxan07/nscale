@@ -1,0 +1,88 @@
+{
+  "name": "demo",
+  "namespace": "demo",
+  "id": "f6db696e-88a6-4c47-88bb-dc3cb51b3a83",
+  "containerDefinitions": [
+    {
+      "type": "blank-container",
+      "id": "root",
+      "name": "root"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "repositoryUrl": "https://github.com/orxan07/server.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 8080:8080 -d",
+          "process": "src/server.js"
+        },
+        "commit": "fc45e8e0a307f41dca81ab955ca76c46a404208c"
+      },
+      "id": "server$fc45e8e0a307f41dca81ab955ca76c46a404208c",
+      "name": "server"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "repositoryUrl": "https://github.com/orxan07/client.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 1337:1337 -d",
+          "process": "src/server.js"
+        },
+        "commit": "31b515f287ae09c0ce471c148748b2f0e3655c6f"
+      },
+      "id": "client$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+      "name": "client"
+    }
+  ],
+  "topology": {
+    "containers": {
+      "root-24a2726d": {
+        "id": "root-24a2726d",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "root",
+        "type": "blank-container",
+        "contains": [
+          "server-306968a5$fc45e8e0a307f41dca81ab955ca76c46a404208c",
+          "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f"
+        ],
+        "specific": {}
+      },
+      "server-306968a5$fc45e8e0a307f41dca81ab955ca76c46a404208c": {
+        "id": "server-306968a5$fc45e8e0a307f41dca81ab955ca76c46a404208c",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "server$fc45e8e0a307f41dca81ab955ca76c46a404208c",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/orxan07/server.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 8080:8080 -d",
+            "process": "src/server.js"
+          },
+          "commit": "fc45e8e0a307f41dca81ab955ca76c46a404208c"
+        }
+      },
+      "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f": {
+        "id": "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "client$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/orxan07/client.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 1337:1337 -d",
+            "process": "src/server.js"
+          },
+          "commit": "31b515f287ae09c0ce471c148748b2f0e3655c6f"
+        }
+      }
+    },
+    "name": "development"
+  }
+}
