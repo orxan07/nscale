@@ -32,7 +32,7 @@ exports.client = {
     repositoryUrl: 'https://github.com/orxan07/client.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 1337:80 -d',
+      args: '-p 1337:8888 -d',
       process: 'src/server.js'
     }
   }
