@@ -31,9 +31,9 @@
           "args": "-p 1337:80 -d",
           "process": "src/server.js"
         },
-        "commit": "31b515f287ae09c0ce471c148748b2f0e3655c6f"
+        "commit": "16384804f06d4a70682579069e37124071bb43aa"
       },
-      "id": "client$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+      "id": "client$16384804f06d4a70682579069e37124071bb43aa",
       "name": "client"
     }
   ],
@@ -46,7 +46,7 @@
         "type": "blank-container",
         "contains": [
           "server-306968a5$5425edaca1140e3549fe126238594d5877f771b9",
-          "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f"
+          "client-476e5833$16384804f06d4a70682579069e37124071bb43aa"
         ],
         "specific": {}
       },
@@ -66,10 +66,10 @@
           "commit": "5425edaca1140e3549fe126238594d5877f771b9"
         }
       },
-      "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f": {
-        "id": "client-476e5833$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+      "client-476e5833$16384804f06d4a70682579069e37124071bb43aa": {
+        "id": "client-476e5833$16384804f06d4a70682579069e37124071bb43aa",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "client$31b515f287ae09c0ce471c148748b2f0e3655c6f",
+        "containerDefinitionId": "client$16384804f06d4a70682579069e37124071bb43aa",
         "type": "docker",
         "contains": [],
         "specific": {
@@ -79,7 +79,7 @@
             "args": "-p 1337:80 -d",
             "process": "src/server.js"
           },
-          "commit": "31b515f287ae09c0ce471c148748b2f0e3655c6f"
+          "commit": "16384804f06d4a70682579069e37124071bb43aa"
         }
       }
     },
