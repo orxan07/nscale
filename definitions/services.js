@@ -37,6 +37,16 @@ exports.client = {
     }
   }
 };
+exports.mongo = {
+  type: 'docker',
+  specific: {
+    name: 'mongo',
+    execute: {
+      args: '-d -p 27017:27017'
+    }
+  }
+};
+
 
 // Example
 //

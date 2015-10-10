@@ -35,6 +35,17 @@
       },
       "id": "client$b5d084af4bf53640dc25edfb0d024fbc0975cfe6",
       "name": "client"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "name": "mongo:latest",
+        "execute": {
+          "args": "-d -p 27017:27017"
+        }
+      },
+      "id": "mongo$mongo_latest",
+      "name": "mongo"
     }
   ],
   "topology": {
@@ -46,7 +57,8 @@
         "type": "blank-container",
         "contains": [
           "server-306968a5$90f74e865405963359571364f9d796a324f052ce",
-          "client-476e5833$b5d084af4bf53640dc25edfb0d024fbc0975cfe6"
+          "client-476e5833$b5d084af4bf53640dc25edfb0d024fbc0975cfe6",
+          "mongo-de670989$mongo_latest"
         ],
         "specific": {}
       },
@@ -80,6 +92,19 @@
             "process": "src/server.js"
           },
           "commit": "b5d084af4bf53640dc25edfb0d024fbc0975cfe6"
+        }
+      },
+      "mongo-de670989$mongo_latest": {
+        "id": "mongo-de670989$mongo_latest",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "mongo$mongo_latest",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "name": "mongo:latest",
+          "execute": {
+            "args": "-d -p 27017:27017"
+          }
         }
       }
     },
