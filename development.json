@@ -28,7 +28,7 @@
         "repositoryUrl": "https://github.com/orxan07/client.git",
         "processBuild": "npm install",
         "execute": {
-          "args": "-p 1337:80 -d",
+          "args": "-p 80:80 -d",
           "process": "src/server.js"
         },
         "commit": "0d48ba7b6e7d4854e2a61cc0989f4212f7300369"
@@ -88,7 +88,7 @@
           "repositoryUrl": "https://github.com/orxan07/client.git",
           "processBuild": "npm install",
           "execute": {
-            "args": "-p 1337:80 -d",
+            "args": "-p 80:80 -d",
             "process": "src/server.js"
           },
           "commit": "0d48ba7b6e7d4854e2a61cc0989f4212f7300369"
