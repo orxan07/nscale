@@ -28,12 +28,12 @@
         "repositoryUrl": "https://github.com/orxan07/client.git",
         "processBuild": "npm install",
         "execute": {
-          "args": "-p 1337:3000 -d",
+          "args": "-p 1337:80 -d",
           "process": "src/server.js"
         },
-        "commit": "a99c3ec44183ef8c71eafba88984edd387228227"
+        "commit": "d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2"
       },
-      "id": "client$a99c3ec44183ef8c71eafba88984edd387228227",
+      "id": "client$d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2",
       "name": "client"
     },
     {
@@ -57,7 +57,7 @@
         "type": "blank-container",
         "contains": [
           "server-306968a5$90f74e865405963359571364f9d796a324f052ce",
-          "client-476e5833$a99c3ec44183ef8c71eafba88984edd387228227",
+          "client-476e5833$d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2",
           "mongo-de670989$mongo_latest"
         ],
         "specific": {}
@@ -78,20 +78,20 @@
           "commit": "90f74e865405963359571364f9d796a324f052ce"
         }
       },
-      "client-476e5833$a99c3ec44183ef8c71eafba88984edd387228227": {
-        "id": "client-476e5833$a99c3ec44183ef8c71eafba88984edd387228227",
+      "client-476e5833$d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2": {
+        "id": "client-476e5833$d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "client$a99c3ec44183ef8c71eafba88984edd387228227",
+        "containerDefinitionId": "client$d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2",
         "type": "docker",
         "contains": [],
         "specific": {
           "repositoryUrl": "https://github.com/orxan07/client.git",
           "processBuild": "npm install",
           "execute": {
-            "args": "-p 1337:3000 -d",
+            "args": "-p 1337:80 -d",
             "process": "src/server.js"
           },
-          "commit": "a99c3ec44183ef8c71eafba88984edd387228227"
+          "commit": "d7f8cd8ea88e6135c3917c70deb441ee6a7a60f2"
         }
       },
       "mongo-de670989$mongo_latest": {
