@@ -9,6 +9,9 @@ exports.topology = {
 
   production: {
     root: ['server', 'client','mongo']
+  },
+  development: {
+    root: ['server']
   }
 };
 

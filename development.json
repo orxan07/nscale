@@ -9,43 +9,18 @@
       "name": "root"
     },
     {
-      "type": "docker",
+      "type": "process",
       "specific": {
         "repositoryUrl": "https://github.com/orxan07/server.git",
         "processBuild": "npm install",
         "execute": {
-          "args": "-p 8000:8080 -d",
-          "process": "src/server.js"
+          "args": "-p 8000:8000 -d",
+          "process": "node server.js"
         },
-        "commit": "1e82e46f5f1628a718102ffcd4a99232127eea8d"
+        "commit": "681ff371d9182d303f7c486159c6f47bc27b97b0"
       },
-      "id": "server$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+      "id": "server$681ff371d9182d303f7c486159c6f47bc27b97b0",
       "name": "server"
-    },
-    {
-      "type": "docker",
-      "specific": {
-        "repositoryUrl": "https://github.com/orxan07/client.git",
-        "processBuild": "npm install",
-        "execute": {
-          "args": "-p 80:80 -d",
-          "process": "src/server.js"
-        },
-        "commit": "9739a1e0f2a9e9df9c8092cf81508b77058baac1"
-      },
-      "id": "client$9739a1e0f2a9e9df9c8092cf81508b77058baac1",
-      "name": "client"
-    },
-    {
-      "type": "docker",
-      "specific": {
-        "name": "mongo:latest",
-        "execute": {
-          "args": "-d -p 27017:27017"
-        }
-      },
-      "id": "mongo$mongo_latest",
-      "name": "mongo"
     }
   ],
   "topology": {
@@ -56,55 +31,24 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "server-306968a5$1e82e46f5f1628a718102ffcd4a99232127eea8d",
-          "client-476e5833$9739a1e0f2a9e9df9c8092cf81508b77058baac1",
-          "mongo-de670989$mongo_latest"
+          "server-306968a5$681ff371d9182d303f7c486159c6f47bc27b97b0"
         ],
         "specific": {}
       },
-      "server-306968a5$1e82e46f5f1628a718102ffcd4a99232127eea8d": {
-        "id": "server-306968a5$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+      "server-306968a5$681ff371d9182d303f7c486159c6f47bc27b97b0": {
+        "id": "server-306968a5$681ff371d9182d303f7c486159c6f47bc27b97b0",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "server$1e82e46f5f1628a718102ffcd4a99232127eea8d",
-        "type": "docker",
+        "containerDefinitionId": "server$681ff371d9182d303f7c486159c6f47bc27b97b0",
+        "type": "process",
         "contains": [],
         "specific": {
           "repositoryUrl": "https://github.com/orxan07/server.git",
           "processBuild": "npm install",
           "execute": {
-            "args": "-p 8000:8080 -d",
-            "process": "src/server.js"
+            "args": "-p 8000:8000 -d",
+            "process": "node server.js"
           },
-          "commit": "1e82e46f5f1628a718102ffcd4a99232127eea8d"
-        }
-      },
-      "client-476e5833$9739a1e0f2a9e9df9c8092cf81508b77058baac1": {
-        "id": "client-476e5833$9739a1e0f2a9e9df9c8092cf81508b77058baac1",
-        "containedBy": "root-24a2726d",
-        "containerDefinitionId": "client$9739a1e0f2a9e9df9c8092cf81508b77058baac1",
-        "type": "docker",
-        "contains": [],
-        "specific": {
-          "repositoryUrl": "https://github.com/orxan07/client.git",
-          "processBuild": "npm install",
-          "execute": {
-            "args": "-p 80:80 -d",
-            "process": "src/server.js"
-          },
-          "commit": "9739a1e0f2a9e9df9c8092cf81508b77058baac1"
-        }
-      },
-      "mongo-de670989$mongo_latest": {
-        "id": "mongo-de670989$mongo_latest",
-        "containedBy": "root-24a2726d",
-        "containerDefinitionId": "mongo$mongo_latest",
-        "type": "docker",
-        "contains": [],
-        "specific": {
-          "name": "mongo:latest",
-          "execute": {
-            "args": "-d -p 27017:27017"
-          }
+          "commit": "681ff371d9182d303f7c486159c6f47bc27b97b0"
         }
       }
     },

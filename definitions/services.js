@@ -1,5 +1,3 @@
-// Place service container definitions here.
-
 exports.root = {
   type: 'blank-container'
 };
@@ -8,7 +6,7 @@ exports.root = {
 exports.server = {
   type: 'docker',
   override: {
-    process: {
+    development: {
       type: 'process'
     }
   },
@@ -23,17 +21,11 @@ exports.server = {
 };
 exports.client = {
   type: 'docker',
-  override: {
-    process: {
-      type: 'process'
-    }
-  },
   specific: {
     repositoryUrl: 'https://github.com/orxan07/client.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 80:80 -d',
-      process: ''
+      args: '-p 80:80 -d'
     }
   }
 };
@@ -46,18 +38,3 @@ exports.mongo = {
     }
   }
 };
-
-
-// Example
-//
-// exports.web = {
-//   type: 'docker',
-//     specific: {
-//       repositoryUrl: 'git@github.com:nearform/nscaledemoweb.git',
-//       execute: {
-//         // docker run <ARGS> image <EXEC>
-//         args: '-p 8000:8000 -d',
-//         exec: ''
-//       }
-//     }
-// };
