@@ -16,7 +16,7 @@ exports.server = {
     repositoryUrl: 'https://github.com/orxan07/server.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 8000:8080 -d',
+      args: '-p 8000:8000 -d',
       process: 'node server.js'
     }
   }

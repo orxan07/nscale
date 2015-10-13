@@ -14,12 +14,12 @@
         "repositoryUrl": "https://github.com/orxan07/server.git",
         "processBuild": "npm install",
         "execute": {
-          "args": "-p 8000:8080 -d",
+          "args": "-p 8000:8000 -d",
           "process": "node server.js"
         },
-        "commit": "1e82e46f5f1628a718102ffcd4a99232127eea8d"
+        "commit": "681ff371d9182d303f7c486159c6f47bc27b97b0"
       },
-      "id": "server$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+      "id": "server$681ff371d9182d303f7c486159c6f47bc27b97b0",
       "name": "server"
     },
     {
@@ -56,26 +56,26 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "server-d13fcfc5$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+          "server-d13fcfc5$681ff371d9182d303f7c486159c6f47bc27b97b0",
           "client-a638ff53$9739a1e0f2a9e9df9c8092cf81508b77058baac1",
           "mongo-3f31aee9$mongo_latest"
         ],
         "specific": {}
       },
-      "server-d13fcfc5$1e82e46f5f1628a718102ffcd4a99232127eea8d": {
-        "id": "server-d13fcfc5$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+      "server-d13fcfc5$681ff371d9182d303f7c486159c6f47bc27b97b0": {
+        "id": "server-d13fcfc5$681ff371d9182d303f7c486159c6f47bc27b97b0",
         "containedBy": "root-73962850",
-        "containerDefinitionId": "server$1e82e46f5f1628a718102ffcd4a99232127eea8d",
+        "containerDefinitionId": "server$681ff371d9182d303f7c486159c6f47bc27b97b0",
         "type": "docker",
         "contains": [],
         "specific": {
           "repositoryUrl": "https://github.com/orxan07/server.git",
           "processBuild": "npm install",
           "execute": {
-            "args": "-p 8000:8080 -d",
+            "args": "-p 8000:8000 -d",
             "process": "node server.js"
           },
-          "commit": "1e82e46f5f1628a718102ffcd4a99232127eea8d"
+          "commit": "681ff371d9182d303f7c486159c6f47bc27b97b0"
         }
       },
       "client-a638ff53$9739a1e0f2a9e9df9c8092cf81508b77058baac1": {
