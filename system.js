@@ -7,7 +7,7 @@ exports.id = 'f6db696e-88a6-4c47-88bb-dc3cb51b3a83';
 
 exports.topology = {
 
-  development: {
+  production: {
     root: ['server', 'client','mongo']
   }
 };

@@ -17,7 +17,7 @@ exports.server = {
     processBuild: 'npm install',
     execute: {
       args: '-p 8000:8080 -d',
-      process: 'src/server.js'
+      process: 'node server.js'
     }
   }
 };
@@ -33,7 +33,7 @@ exports.client = {
     processBuild: 'npm install',
     execute: {
       args: '-p 80:80 -d',
-      process: 'src/server.js'
+      process: ''
     }
   }
 };
